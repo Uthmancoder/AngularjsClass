@@ -1,0 +1,51 @@
+<div>
+  <form
+    action=""
+    class="rounded shadow bg alert alert-light p-3 my-5 col-11 col-md-8 col-lg-6 mx-auto"
+  >
+    <input
+      class="form-control my-3"
+      type="text"
+      name="name"
+      placeholder="Add Product Name"
+      [(ngModel)]="name"
+    />
+    <input
+      class="form-control my-3"
+      [(ngModel)]="id"
+      name="id"
+      type="number"
+      placeholder="Add Product Id"
+    />
+    <input
+      class="form-control my-3"
+      type="text"
+      name="description"
+      placeholder="Add Product Description"
+      [(ngModel)]="description"
+    />
+    <input
+      class="form-control my-3"
+      type="number"
+      placeholder="Add Product Price"
+      name="price"
+      [(ngModel)]="price"
+    />
+    <input
+      class="form-control my-3"
+      type="text"
+      placeholder="Add Product Category"
+      name="category"
+      [(ngModel)]="category"
+    />
+    <input
+      (change)="handleSelectImage($event)"
+      type="file"
+      name="image"
+      class="form-control my-3"
+    />
+    <button (click)="handleSubmit()" class="btn btn alert alert-success w-100">
+      Add Product
+    </button>
+  </form>
+</div>

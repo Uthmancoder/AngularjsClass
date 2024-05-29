@@ -13,38 +13,31 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Contact</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Services</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a
-            class="nav-link dropdown-toggle"
-            href="#"
-            role="button"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
+      <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-5">
+        <li routerLinkActive="activeRoute" class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="/home"
+            >Home</a
           >
-            Dropdown
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider" /></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
         </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+        <li routerLinkActive="activeRoute" class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="/about"
+            >About</a
+          >
+        </li>
+        <li routerLinkActive="activeRoute" class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="contact"
+            >Contact</a
+          >
+        </li>
+        <li routerLinkActive="activeRoute" class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="products"
+            >Products</a
+          >
+        </li>
+        <li routerLinkActive="activeRoute" class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="services"
+            >Services</a
+          >
         </li>
       </ul>
       <div class="d-flex gap-4" role="search">

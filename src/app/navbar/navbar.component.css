@@ -1,0 +1,7 @@
+.activeRoute {
+  color: rgb(233, 229, 229);
+  font-weight: bold;
+  border-bottom: 2px solid rgb(252, 149, 149, 0.7);
+  border-radius: 10px;
+  background-color: rgba(95, 242, 122, 0.8);
+}
