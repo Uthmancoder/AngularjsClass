@@ -3,10 +3,20 @@
     *ngFor="let item of Products"
     class="mx-1 h-100 rounded-md p-2 shadow child"
   >
-    <img class="img-fluid" src="{{ item.image }}" alt="" />
+    <div class="img-div">
+      <img class="img-fluid w-100 h-100" src="{{ item.image }}" alt="" />
+    </div>
     <h4>{{ item.name }}</h4>
     <p>{{ item.price }}</p>
     <p>{{ item.category }}</p>
-    <button class="btn btn alert alert-success w-100">Add To Cart</button>
+    <div class="d-flex items-center justify-content-between">
+      <button
+        (click)="handleShowDetails(item.id)"
+        class="btn btn alert alert-danger"
+      >
+        Show Details
+      </button>
+      <button class="btn btn alert alert-success">Add To Cart</button>
+    </div>
   </div>
 </div>

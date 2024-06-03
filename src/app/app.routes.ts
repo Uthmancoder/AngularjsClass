@@ -6,6 +6,8 @@ import { NonfoundComponent } from './nonfound/nonfound.component';
 import { ServicesComponent } from './services/services.component';
 import { ProductsComponent } from './products/products.component';
 import { AddproductsComponent } from './addproducts/addproducts.component';
+import { ProductDescriptionComponent } from './product-description/product-description.component';
+
 
 export const routes: Routes = [
    {path : "", redirectTo : "/home", pathMatch : 'full'},
@@ -14,6 +16,7 @@ export const routes: Routes = [
     {path : "contact", component : ContactpageComponent},
     {path :  "services", component : ServicesComponent},
     {path  : "products", component : ProductsComponent},
+    {path : "products/:id", component : ProductDescriptionComponent},
     {path : "add-product", component : AddproductsComponent},
     {path : "**", component : NonfoundComponent}
 ];

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ProductserviceService } from '../productservice.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-addproducts',
@@ -17,8 +18,9 @@ export class AddproductsComponent {
   description : string = "";
   image : string = "";
   category : string = "";
+  productForm: any;
 
-  constructor(private AllProduct : ProductserviceService){}
+  constructor(private AllProduct : ProductserviceService, private router : Router){}
 
   handleSelectImage(event :any){
     let file = event.target.files[0]
@@ -32,6 +34,9 @@ export class AddproductsComponent {
   handleSubmit(){
     this.AllProduct.AddProduct(this.id, this.name, this.price, this.description, this.image, this.category)
     console.log("All Products After Adding :", this.AllProduct.AllProducts)
+    alert("Product Added Successfuly")
+    this.router.navigate(['/products'])
+
   }
 
 }

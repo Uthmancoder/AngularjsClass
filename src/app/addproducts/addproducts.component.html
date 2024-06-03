@@ -1,6 +1,8 @@
 <div>
   <form
     action=""
+    ngModel="productForm"
+    (submit)="handleSubmit()"
     class="rounded shadow bg alert alert-light p-3 my-5 col-11 col-md-8 col-lg-6 mx-auto"
   >
     <input
@@ -44,7 +46,7 @@
       name="image"
       class="form-control my-3"
     />
-    <button (click)="handleSubmit()" class="btn btn alert alert-success w-100">
+    <button type="submit" class="btn btn alert alert-success w-100">
       Add Product
     </button>
   </form>
