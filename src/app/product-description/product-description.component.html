@@ -10,6 +10,11 @@
     </p>
     <p class="details">Product Price : #{{ SingleProduct.price }}</p>
     <p class="details">Product Category : {{ SingleProduct.category }}</p>
-    <button class="btn btn alert alert-success w-100">Add To Cart</button>
+    <button
+      (click)="handleAddToCart(SingleProduct.id)"
+      class="btn btn alert alert-success w-100"
+    >
+      Add To Cart
+    </button>
   </div>
 </div>

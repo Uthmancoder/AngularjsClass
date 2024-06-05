@@ -5,11 +5,12 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
 import { AppRoutingModule } from './app.routing.module';
 import { ProductserviceService } from './productservice.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NavbarComponent, AppRoutingModule],
+  imports: [RouterOutlet, NavbarComponent, AppRoutingModule, HttpClientModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
   providers : [ProductserviceService]
