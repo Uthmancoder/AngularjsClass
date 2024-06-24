@@ -1,0 +1,78 @@
+<div>
+  <form
+    action=""
+    [formGroup]="form"
+    class="p-3 rounded-3 shadow col-11 col-md-8 col-lg-6 mx-auto mt-5"
+    (ngSubmit)="submitForm()"
+  >
+    <input
+      formControlName="firstName"
+      name="firstName"
+      type="text"
+      placeholder="First Name"
+      class="form-control my-3"
+      [class.is-invalid]="
+        form.get('firstName')?.touched && form.get('firstName')?.invalid
+      "
+    />
+    <small
+      class="text-danger"
+      *ngIf="
+        form.get('firstName')?.touched &&
+        form.get('firstName')?.errors as errors
+      "
+    >
+      <div *ngIf="errors?.['required']">
+        {{ errorMessages.firstName.required }}
+      </div>
+      <div *ngIf="errors?.['minlength']">
+        {{ errorMessages.firstName.minlength }}
+      </div>
+      <div *ngIf="errors?.['maxlength']">
+        {{ errorMessages.firstName.maxlength }}
+      </div>
+    </small>
+
+    <input
+      formControlName="lastName"
+      name="lastName"
+      type="text"
+      placeholder="Last Name"
+      class="form-control my-3"
+      [class.is-invalid]="
+        form.get('lastName')?.touched && form.get('lastName')?.invalid
+      "
+    />
+    <small
+      class="text-danger"
+      *ngIf="
+        form.get('lastName')?.touched && form.get('lastName')?.errors as errors
+      "
+    >
+      <div *ngIf="errors?.['required']">
+        {{ errorMessages.lastName.required }}
+      </div>
+      <div *ngIf="errors?.['minlength']">
+        {{ errorMessages.lastName.minlength }}
+      </div>
+      <div *ngIf="errors?.['maxlength']">
+        {{ errorMessages.lastName.maxlength }}
+      </div>
+    </small>
+    <input
+      formControlName="email"
+      name="email"
+      type="email"
+      placeholder="Email"
+      class="form-control my-3"
+    />
+    <input
+      formControlName="password"
+      name="password"
+      type="password"
+      placeholder="Password"
+      class="form-control my-3"
+    />
+    <button type="submit" class="btn btn-dark w-100">Sign Up</button>
+  </form>
+</div>
